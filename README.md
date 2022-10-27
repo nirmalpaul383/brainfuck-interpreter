@@ -83,7 +83,7 @@ from now on the next cell after our last current cell will be used as counter
 >>++++++++++[-<+++++++++++>]<--.  for printing "l"
 `
 let BF_Interpreter = new bf_interpreter(); //Creating a new brainfuck interpreter
-console.log(BF_Interpreter.interprete(bfCodes)) //Print "by N Paul" into the console
+console.log(BF_Interpreter.interpret(bfCodes)) //Print "by N Paul" into the console
 ```
 ...............................................................................................................
 
