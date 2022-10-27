@@ -32,8 +32,8 @@ You can find various programming guides that show you how to program in the Brai
 ## How to use this interpreter?
 To use this interpreter / library firstly, you need to link bf_interpreter.js to your project, you can do that by using two ways:
 * (1) you can either download/clone it and then use **'bf_interpreter.js'** file
-* (2) or you can use it directly using **`https://cdn.jsdelivr.net/gh/nirmalpaul383/brainfuck-interpreter/bf_interpreter.js`**
-  For using it in browser/webpage you can use **``` <script src="https://cdn.jsdelivr.net/gh/nirmalpaul383/brainfuck-interpreter/bf_interpreter.js"></script> ```**
+* (2) or you can use it directly using **`https://cdn.jsdelivr.net/gh/nirmalpaul383/brainfuck-interpreter@latest/bf_interpreter.js`**
+  For using it in browser/webpage you can use **``` <script src="https://cdn.jsdelivr.net/gh/nirmalpaul383/brainfuck-interpreter@latest/bf_interpreter.js"></script> ```**
 
 Then you need to create a brainfuck interpreter object using ` new bf_interpreter ` keywords:
 ```JavaScript
@@ -49,7 +49,7 @@ let codes = `>[-] >[-]++++++++[<+++++++++>-]<.>+++++[<++++++>-]<-.+++++++..+++.>
 console.log(myInterpreter.interpret(codes)) //Executes Brainfuck program and returns "Hello World!" into the javascript console
 ```
 
-#### Usage of ` .memoryTape `,` .pointer `,` .stack `,` .output ` property
+#### Usage of ` .memoryTape `,` .pointer `,` .stack `,` .output ` properties
 To view the last (after the last time code is interpreted) memory tape value in the brainfuck interpreter you can use ` .memoryTape ` property
 
 Similarly to view last (after the last time code is interpreted) position of the pointer you can use ` .pointer ` property
