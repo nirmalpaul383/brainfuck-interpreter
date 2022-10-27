@@ -19,7 +19,7 @@ class bf_interpreter {
     output = ""; //For holding output value
 
 
-    interprete(codes) {
+    interpret (codes) {
 
         this.memoryTape = [0] //To reset brainfuck 's memory tape (re-initilized one cell with value of 0)
         this.pointer = 0; //To reset brainfuck 's pointer
