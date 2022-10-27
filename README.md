@@ -31,7 +31,7 @@ You can find various programming guides that show you how to program in the Brai
 
 ## How to use this interpreter?
 To use this interpreter / library firstly, you need to link bf_interpreter.js to your project, you can do that by using two ways:
-* (1) you can either download/clone it and then use '**bf_interpreter.js**' file
+* (1) you can either download/clone it and then use **'bf_interpreter.js'** file
 * (2) or you can use it directly using **`https://cdn.jsdelivr.net/gh/nirmalpaul383/brainfuck-interpreter/bf_interpreter.js`**
   For using it in browser/webpage you can use **``` <script src="https://cdn.jsdelivr.net/gh/nirmalpaul383/brainfuck-interpreter/bf_interpreter.js"></script> ```**
 
@@ -51,8 +51,11 @@ console.log(myInterpreter.interpret(codes)) //Executes Brainfuck program and ret
 
 #### Usage of ` .memoryTape `,` .pointer `,` .stack `,` .output ` property
 To view the last (after the last time code is interpreted) memory tape value in the brainfuck interpreter you can use ` .memoryTape ` property
+
 Similarly to view last (after the last time code is interpreted) position of the pointer you can use ` .pointer ` property
+
 For viewing any un-settelment last (after the last time code is interpreted) stack information you can use ` .stack ` property (This is for debugging usage only, in normal case this should return an empty array)
+
 For viewing the last (after the last time code is interpreted) output / returned value in the brainfuck interpreter you can use ` .output ` property
 ```JavaScript
 console.log(myInterpreter.memoryTape) //Returns [ 0, 33, 0 ] into the console object
