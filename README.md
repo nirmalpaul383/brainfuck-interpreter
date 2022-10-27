@@ -76,7 +76,7 @@ our first cell will be used as counter
 <<++++++++[->>>++++<<<]>>>. for printing " " (Space)
 <<<++++++++++[->>>>++++++++<<<<]>>>>--.  for printing "N"
 <<<<++++++++[->>>>>++++<<<<<]>>>>>.  for printing " " (Space)
-<<<<<++++++++++[->>>>>>++++++++<<<<<<]>>>>>>.
+<<<<<++++++++++[->>>>>>++++++++<<<<<<]>>>>>>.  for printing "P"
 from now on the next cell after our last current cell will be used as counter
 >>++++++++++[-<++++++++++>]<---.  for printing "a"
 >>++++++++++[-<++++++++++++>]<---. for printing "u"
