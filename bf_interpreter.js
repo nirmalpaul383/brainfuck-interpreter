@@ -17,9 +17,10 @@ class bf_interpreter {
     pointer = 0; //For defining brainfuck 's pointer
     stack = []; //For stacking loop information (loop start / loop end positions)
     output = ""; //For holding output value
+    steps = []; //For recording log for every step of execution
 
 
-    interpret (codes) {
+    interpret(codes, stepRecorder = false) {
 
         this.memoryTape = [0] //To reset brainfuck 's memory tape (re-initilized one cell with value of 0)
         this.pointer = 0; //To reset brainfuck 's pointer
@@ -30,11 +31,18 @@ class bf_interpreter {
 
         this.output = ""; //To reset output
 
+        this.steps = ["To record step-logs, stepRecorder parameter must be set to true during code interpretion [e.g. my_BF_Interpreter.interpret(codes,true)]"]; //To reset step-logs
+
+
         //To individually check each character in the brainfuck codes
-        for (let i = 0; i <= codes.length; i += 1) {
+        for (let i = 0; i < codes.length; i += 1) {
 
             let currentCmd = codes[i]; //Current keyword / command in codes string
 
+            //Step recording function will only works if stepRecorder parameter is true
+            if (stepRecorder == true) {
+                this.steps[i] = {Memorytape: `${this.memoryTape}`, Pointer: `${this.pointer}`, Output: `${this.output}`, CurrentChr: `${currentCmd}` }
+            }
 
             if ((currentCmd === ">") && (execSkip === false)) {
                 this.pointer += 1;
@@ -133,5 +141,4 @@ class bf_interpreter {
         return this.output; //To return output value
     }
 }
-
 
