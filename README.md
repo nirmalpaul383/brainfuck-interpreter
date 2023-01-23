@@ -49,19 +49,24 @@ let codes = `>[-] >[-]++++++++[<+++++++++>-]<.>+++++[<++++++>-]<-.+++++++..+++.>
 console.log(myInterpreter.interpret(codes)) //Executes Brainfuck program and returns "Hello World!" into the javascript console
 ```
 
-#### Usage of ` .memoryTape `,` .pointer `,` .stack `,` .output ` properties
+#### Usage of ` .memoryTape `,` .pointer `,` .stack `,` .output `,` .steps ` properties
 To view the last (after the last time code is interpreted) memory tape value in the brainfuck interpreter you can use ` .memoryTape ` property
 
 Similarly to view last (after the last time code is interpreted) position of the pointer you can use ` .pointer ` property
 
 For viewing any un-settelment last (after the last time code is interpreted) stack information you can use ` .stack ` property (This is for debugging usage only, in normal case this should return an empty array)
 
-For viewing the last (after the last time code is interpreted) output / returned value in the brainfuck interpreter you can use ` .output ` property
+For viewing the last (after the last time code is interpreted) output / returned value in the brainfuck interpreter you can use ` .output ` property.
+
+For veiwing the last (after the last time code is interpreted) codes execution logs / steps you can use `.steps` property.
+**Note:** To use the ` .step ` property, the stepRecorder must be set to **True** when interpreting the code (e.g. ` myInterpreter.interpret(codes , True) `)
+
 ```JavaScript
 console.log(myInterpreter.memoryTape) //Returns [ 0, 33, 0 ] into the console object
 console.log(myInterpreter.pointer) //Returns 0 into the console object
 console.log(myInterpreter.stack) //Returns [] into the console object
 console.log(myInterpreter.output) //Returns "Hello World!" into the console object
+console.log(myInterpreter.steps) //Returns codes execution steps (logs) into the console object
 ```
 
 ...............................................................................................................
