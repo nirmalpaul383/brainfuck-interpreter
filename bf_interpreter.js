@@ -42,7 +42,7 @@ class bf_interpreter {
 
             //Step recording function will only works if stepRecorder parameter is true
             if (stepRecorder == true) {
-                this.steps[stepCount] = {Memorytape: `${this.memoryTape}`, Pointer: `${this.pointer}`, Output: `${this.output}`, CurrentChr: `${currentCmd}` };
+                this.steps[stepCount] = {StepNo: `${stepCount}`, Memorytape: `${this.memoryTape}`, Pointer: `${this.pointer}`, Output: `${this.output}`, CurrentChr: `${currentCmd}` };
                 stepCount +=1; //The step counter will be incremented each time when a new step log is recorded
             }
 
@@ -143,4 +143,5 @@ class bf_interpreter {
         return this.output; //To return output value
     }
 }
+
 
