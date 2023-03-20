@@ -32,6 +32,7 @@ class bf_interpreter {
         this.output = ""; //To reset output
 
         this.steps = ["To record step-logs, stepRecorder parameter must be set to true during code interpretion [e.g. my_BF_Interpreter.interpret(codes,true)]"]; //To reset step-logs
+        let stepCount = 0; //For counting the steps
 
 
         //To individually check each character in the brainfuck codes
@@ -41,7 +42,8 @@ class bf_interpreter {
 
             //Step recording function will only works if stepRecorder parameter is true
             if (stepRecorder == true) {
-                this.steps[i] = {Memorytape: `${this.memoryTape}`, Pointer: `${this.pointer}`, Output: `${this.output}`, CurrentChr: `${currentCmd}` }
+                this.steps[stepCount] = {Memorytape: `${this.memoryTape}`, Pointer: `${this.pointer}`, Output: `${this.output}`, CurrentChr: `${currentCmd}` };
+                stepCount +=1; //The step counter will be incremented each time when a new step log is recorded
             }
 
             if ((currentCmd === ">") && (execSkip === false)) {
